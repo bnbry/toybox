@@ -2,36 +2,29 @@
   "name": "tskeleton",
   "version": "1.0.0",
   "description": "a ts skeleton",
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": "git@github.com:bnbry/tskeleton.git",
   "author": "Matthew Banbury <mbanbury@gmail.com>",
   "license": "CC0-1.0",
   "private": false,
   "scripts": {
-    "cli": "ts-node src/cli.ts",
     "test": "jest",
     "lint": "eslint src/ --ext .js,.jsx,.ts,.tsx",
     "clean": "rm -rf dist build",
-    "ts-node": "ts-node",
-    "build": "tsc -p tsconfig.json",
-    "build-all": "yarn clean && yarn build && yarn esbuild-node && yarn esbuild-browser",
-    "esbuild-browser": "esbuild src/browser.ts --bundle --minify --sourcemap=external --outfile=dist/browser.js",
-    "esbuild-browser:dev": "esbuild src/browser.ts --bundle --outfile=dist/browser.js",
-    "esbuild-browser:watch": "esbuild src/browser.ts --bundle --watch --outfile=dist/browser.js",
-    "esbuild-node": "esbuild src/cli.ts --bundle --platform=node --minify --sourcemap=external --outfile=dist/cli.js",
-    "esbuild-node:dev": "esbuild src/cli.ts --bundle --platform=node --sourcemap=external --outfile=dist/cli.js",
-    "esbuild-node:watch": "esbuild src/cli.ts --bundle --platform=node --watch --sourcemap=external --outfile=dist/cli.js"
+    "build": "yarn clean && yarn build:dist",
+    "build:dist": "esbuild src/index.ts --bundle --minify --sourcemap=external --outfile=dist/index.js",
+    "build:dev": "esbuild src/index.ts --bundle --outfile=dist/index.js",
+    "build:tsc": "tsc -p tsconfig.json",
+    "build:watch": "esbuild src/index.ts --bundle --watch --outfile=dist/index.js"
   },
   "devDependencies": {
     "@types/jest": "^28.1.5",
-    "@types/node": "^18.0.4",
     "@typescript-eslint/eslint-plugin": "^5.30.6",
     "@typescript-eslint/parser": "^5.30.6",
     "esbuild": "^0.14.49",
     "eslint": "^8.19.0",
     "jest": "^28.1.3",
     "ts-jest": "^28.0.6",
-    "ts-node": "^10.9.1",
     "typescript": "^4.7.4"
   }
 }
