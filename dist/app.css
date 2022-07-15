@@ -57,7 +57,120 @@ select {
 }
 
 /* src/app.scss */
+.hidden {
+  display: none;
+}
+.toybox .counting section {
+  width: 100%;
+  max-width: 600px;
+  margin: 30px auto;
+  text-align: center;
+}
+.toybox .counting .current-number {
+  font-size: 192px;
+  color: #2ecc71;
+  width: 100%;
+  margin: 16px 0 0;
+  line-height: 1em;
+  font-family: "Fredoka One", cursive;
+}
+.toybox .counting .current-number-word {
+  margin: 0 0 0.16em;
+  font-size: 32px;
+  color: #2ecc71;
+  width: 100%;
+  line-height: 1em;
+}
+.toybox .counting .message {
+  font-size: 28px;
+}
+.toybox .counting .options {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  position: relative;
+}
+.toybox .counting .option {
+  width: 160px;
+  position: relative;
+  display: inline-block;
+  font-size: 48px;
+  color: white;
+  padding: 12px 48px;
+  border-radius: 16px;
+  margin: 16px;
+  background-color: #f39c12;
+  box-shadow: 0 16px #d2850b;
+  border: 2px solid #ab6c09;
+  text-decoration: none;
+  line-height: 1em;
+  top: 0;
+  font-family: "Fredoka One", cursive;
+}
+.toybox .counting .option:first-child {
+  background-color: #e74c3c;
+  box-shadow: 0 16px #df2e1b;
+  border-color: #ba2617;
+}
+.toybox .counting .option:last-child {
+  background-color: #3498db;
+  box-shadow: 0 16px #2383c4;
+  border-color: #1d6ca1;
+}
+.toybox .counting .option:active {
+  top: 16px;
+  box-shadow: none;
+}
+.toybox .counting .option[disabled] {
+  color: #95a5a6;
+  background-color: #bdc3c7;
+  box-shadow: 0 16px #a7afb4;
+  border-color: #919ba2;
+}
+.toybox .counting .option[disabled]:active {
+  top: 0;
+  box-shadow: 0 16px #95a5a6;
+}
+@media (max-width: 500px) {
+  .toybox .counting .current-number {
+    font-size: 128px;
+  }
+  .toybox .counting .current-number-word {
+    font-size: 22px;
+  }
+  .toybox .counting .message {
+    font-size: 18px;
+  }
+  .toybox .counting .display,
+  .toybox .counting .controls {
+    margin: 15px 0;
+  }
+  .toybox .counting .option {
+    width: 72px;
+    font-size: 18px;
+    padding: 12px 24px;
+    margin: 8px;
+  }
+}
 body {
-  font-family: "Inter", sans-serif;
-  color: #212121;
+  font-family: "Poppins", sans-serif;
+  color: #34495e;
+  -webkit-font-smoothing: antialiased;
+}
+.masthead {
+  text-align: center;
+  font-family: "Fredoka One", cursive;
+}
+a,
+a:visited,
+a:link,
+a:active {
+  color: #2ecc71;
+}
+a:hover,
+a:visited:hover,
+a:link:hover,
+a:active:hover {
+  color: #26ab5f;
 }

@@ -1,5 +1,5 @@
-let n:number | string = 27;
-n = "hello";
-n = 25;
+import { Application } from "@hotwired/stimulus"
+import CountingController from "./ts/counting_controller"
 
-console.log(n);
+window.Stimulus = Application.start();
+Stimulus.register("counting", CountingController);

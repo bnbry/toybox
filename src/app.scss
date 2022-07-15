@@ -1,8 +1,26 @@
 @import "css/reset.css";
-
-$color: #212121;
+@import "css/colors";
+@import "css/typo";
+@import "css/utils";
+@import "css/counting";
 
 body {
-  font-family: "Inter", sans-serif;
-  color: $color;
+  font-family: 'Poppins', sans-serif;
+  color: $void;
+  -webkit-font-smoothing: antialiased;
+}
+
+.masthead {
+  text-align: center;
+  font-family: $display-font;
+}
+a,
+a:visited,
+a:link,
+a:active {
+  color: $green;
+
+  &:hover {
+    color: $green_dark;
+  }
 }

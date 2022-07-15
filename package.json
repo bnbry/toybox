@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "esbuild-sass-plugin": "^2.2.6",
-    "minimist": "^1.2.6"
+    "minimist": "^1.2.6",
+    "stimulus": "^3.0.1"
   }
 }
