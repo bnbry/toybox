@@ -1,31 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>toybox</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="../dist/app.css" />
-  <script src="../dist/app.js" defer></script>
-</head>
-<body class="toybox">
-  <main class="counting" data-controller="counting">
-    <section class="display">
-      <h1 class="current-number" data-counting-target="currentNumber">0</h1>
-      <h2 class="current-number-word" data-counting-target="currentNumberWord">zero</h2>
-      <h3 class="mistakes">Wrong Numbers: <span data-counting-target="mistakes">0</span></h3>
-    </section>
-    <section class="controls">
-      <h3 class="message" data-counting-target="message">What number is next?</h3>
-      <ul class="options">
-        <li class="option"><a href="#" data-number="1" data-counting-target="numberOption" data-action="click->counting#selectNumber">1</a></li>
-        <li class="option"><a href="#" data-number="9" data-counting-target="numberOption" data-action="click->counting#selectNumber">9</a></li>
-        <li class="option"><a href="#" data-number="4" data-counting-target="numberOption" data-action="click->counting#selectNumber">4</a></li>
-      </ul>
-    </section>
-  </main>
-</body>
-</html>
+<main class="counting" data-controller="counting">
+  <section class="display">
+    <h1 class="current-number" data-counting-target="currentNumber">0</h1>
+    <h2 class="current-number-word" data-counting-target="currentNumberWord">zero</h2>
+    <h3 class="mistakes">Wrong Numbers: <span data-counting-target="mistakes">0</span></h3>
+  </section>
+  <section class="controls">
+    <h3 class="message" data-counting-target="message">What number is next?</h3>
+    <ul class="options">
+      <li class="option"><a href="#" data-number="1" data-counting-target="numberOption" data-action="click->counting#selectNumber">1</a></li>
+      <li class="option"><a href="#" data-number="9" data-counting-target="numberOption" data-action="click->counting#selectNumber">9</a></li>
+      <li class="option"><a href="#" data-number="4" data-counting-target="numberOption" data-action="click->counting#selectNumber">4</a></li>
+    </ul>
+  </section>
+</main>

@@ -11,14 +11,16 @@
   <link rel="stylesheet" type="text/css" href="dist/app.css" />
   <script src="dist/app.js" defer></script>
 </head>
-<body class="toybox">
-  <main class="home">
-    <h1 class="masthead">toybox!</h1>
-    <ul class="toys">
-      <li>
-        <a href="counting">Counting</a>
-      </li>
-    </ul>
-  </main>
+<body class="toybox" data-controller="toybox">
+  <h1 class="masthead">toybox!</h1>
+  <section data-toybox-target="toy">
+    <main class="home">
+      <ul class="toys">
+        <li>
+          <a href="counting">Counting</a>
+        </li>
+      </ul>
+    </main>
+  </section>
 </body>
 </html>

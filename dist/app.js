@@ -564,13 +564,13 @@
     }
   };
   function add(map, key, value) {
-    fetch(map, key).add(value);
+    fetch2(map, key).add(value);
   }
   function del(map, key, value) {
-    fetch(map, key).delete(value);
+    fetch2(map, key).delete(value);
     prune(map, key);
   }
-  function fetch(map, key) {
+  function fetch2(map, key) {
     let values = map.get(key);
     if (!values) {
       values = /* @__PURE__ */ new Set();
@@ -1866,6 +1866,16 @@
   Controller.targets = [];
   Controller.values = {};
 
+  // src/ts/toybox_controller.ts
+  var toybox_controller_default = class extends Controller {
+    connect() {
+      fetch("counting/index.html", { mode: "no-cors" }).then((res) => res.text()).then((html) => this.toyTarget.innerHTML = html).catch((err) => console.error(err));
+    }
+  };
+  toybox_controller_default.targets = [
+    "toy"
+  ];
+
   // src/ts/counting_controller.ts
   var DATA = {
     0: "zero",
@@ -2063,5 +2073,6 @@
 
   // src/app.ts
   window.Stimulus = Application.start();
+  Stimulus.register("toybox", toybox_controller_default);
   Stimulus.register("counting", counting_controller_default);
 })();
