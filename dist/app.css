@@ -76,10 +76,45 @@ select {
     transform: translate3d(-4px, -2px, -2px);
   }
 }
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 148px;
+  height: 148px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 128px;
+  height: 128px;
+  margin: 10px;
+  border: 32px solid #2ecc71;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #2ecc71 transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .toybox .counting section {
   width: 100%;
   max-width: 600px;
-  margin: 60px auto;
+  margin: 40px auto;
   text-align: center;
 }
 .toybox .counting .current-number {
@@ -197,6 +232,16 @@ body {
 .masthead {
   text-align: center;
   font-family: "Fredoka One", cursive;
+  color: #34495e;
+  background-color: #efefef;
+  padding: 5px;
+  border-bottom: 2px solid #dfdfdf;
+}
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
 }
 a,
 a:visited,
