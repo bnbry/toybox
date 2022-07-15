@@ -16,15 +16,14 @@
     <section class="display">
       <h1 class="current-number" data-counting-target="currentNumber">0</h1>
       <h2 class="current-number-word" data-counting-target="currentNumberWord">zero</h2>
+      <h3 class="mistakes">Wrong Numbers: <span data-counting-target="mistakes">0</span></h3>
     </section>
     <section class="controls">
-      <h3 class="message">What number is next?</h3>
+      <h3 class="message" data-counting-target="message">What number is next?</h3>
       <ul class="options">
-        <li>
-          <a href="#" class="option" data-number="1" data-counting-target="numberOption" data-action="click->counting#selectNumber">1</a>
-          <a href="#" class="option" data-number="9" data-counting-target="numberOption" data-action="click->counting#selectNumber">9</a>
-          <a href="#" class="option" data-number="4" data-counting-target="numberOption" data-action="click->counting#selectNumber">4</a>
-        </li>
+        <li class="option"><a href="#" data-number="1" data-counting-target="numberOption" data-action="click->counting#selectNumber">1</a></li>
+        <li class="option"><a href="#" data-number="9" data-counting-target="numberOption" data-action="click->counting#selectNumber">9</a></li>
+        <li class="option"><a href="#" data-number="4" data-counting-target="numberOption" data-action="click->counting#selectNumber">4</a></li>
       </ul>
     </section>
   </main>

@@ -115,6 +115,8 @@ export default class extends Controller {
   currentNumberTarget!: HTMLElement
   currentNumberWordTarget!: HTMLElement
   messageTarget!: HTMLElement
+  mistakes!: number
+  mistakesTarget!: HTMLElement
   numberOptionTargets!: HTMLElement[]
 
   static targets = [
@@ -122,13 +124,17 @@ export default class extends Controller {
     "currentNumberWord",
     "message",
     "numberOption",
+    "mistakes",
   ]
 
   connect() {
     this.currentNumber = 0;
+    this.mistakes = 0;
   }
 
   selectNumber(e: Event) {
+    e?.preventDefault();
+
     if (e?.currentTarget instanceof HTMLElement) {
       const el = e.currentTarget;
 
@@ -148,6 +154,8 @@ export default class extends Controller {
   handleFailure(wrongChoice: HTMLElement) {
     wrongChoice.setAttribute("disabled", "");
     wrongChoice.textContent = "X";
+    this.mistakes += 1;
+    this.mistakesTarget.textContent = `${this.mistakes}`;
   }
 
   handleSuccess(newNumber: number) {

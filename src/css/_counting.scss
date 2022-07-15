@@ -2,12 +2,12 @@
   section {
     width: 100%;
     max-width: 600px;
-    margin: 30px auto;
+    margin: 60px auto;
     text-align: center;
   }
 
   .current-number {
-    font-size: 192px;
+    font-size: 256px;
     color: $green;
     width: 100%;
     margin: 16px 0 0;
@@ -23,8 +23,14 @@
     line-height: 1em;
   }
 
+  .mistakes {
+    font-size: 14px;
+    margin: 15px auto;
+  }
+
   .message {
     font-size: 28px;
+    margin: 15px auto;
   }
 
   .options {
@@ -36,8 +42,12 @@
   }
 
   .option {
-    width: 160px;
+    display: inline-block;
+  }
+
+  .option a {
     position: relative;
+    width: 160px;
     display: inline-block;
     font-size: 48px;
     color: white;
@@ -49,35 +59,38 @@
     border: 2px solid $orange_darker;
     text-decoration: none;
     line-height: 1em;
-    top: 0;
     font-family: 'Fredoka One', cursive;
+    top: 0;
   }
 
-  .option:first-child {
+  .option:first-child a {
     background-color: $red;
     box-shadow: 0 16px $red_dark;
     border-color: $red_darker;
   }
 
-  .option:last-child {
+  .option:last-child a {
     background-color: $blue;
     box-shadow: 0 16px $blue_dark;
     border-color: $blue_darker;
   }
 
-  .option:active {
+  .option a:active {
     top: 16px;
     box-shadow: none;
   }
 
-  .option[disabled] {
+  .option a[disabled] {
     color: $smoke;
     background-color: $grey;
     box-shadow: 0 16px $grey_dark;
     border-color: $grey_darker;
+    animation: shake 0.82s cubic-bezier(.33,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    perspective: 1000px;
   }
 
-  .option[disabled]:active {
+  .option a[disabled]:active {
     top: 0;
     box-shadow: 0 16px $smoke;
   }
@@ -86,27 +99,39 @@
 @media (max-width: 500px) {
   .toybox .counting {
     .current-number {
-      font-size: 128px;
-    }
-
-    .current-number-word {
-      font-size: 22px;
+      font-size: 192px;
     }
 
     .message {
       font-size: 18px;
     }
 
-    .display,
-    .controls {
-      margin: 15px 0;
+    .option a {
+      width: 92px;
+      font-size: 24px;
+      padding: 12px 24px;
+      margin: 6px;
+      box-shadow: 0 12px $orange_dark;
     }
 
-    .option {
-      width: 72px;
-      font-size: 18px;
-      padding: 12px 24px;
-      margin: 8px;
+    .option:first-child a {
+      box-shadow: 0 12px $red_dark;
+    }
+
+    .option:last-child a {
+      box-shadow: 0 12px $blue_dark;
+    }
+
+    .option a:active {
+      box-shadow: none;
+    }
+
+    .option a[disabled] {
+      box-shadow: 0 12px $grey_dark;
+    }
+
+    .option a[disabled]:active {
+      box-shadow: 0 12px $smoke;
     }
   }
 }

@@ -1979,8 +1979,10 @@
   var counting_controller_default = class extends Controller {
     connect() {
       this.currentNumber = 0;
+      this.mistakes = 0;
     }
     selectNumber(e) {
+      e == null ? void 0 : e.preventDefault();
       if ((e == null ? void 0 : e.currentTarget) instanceof HTMLElement) {
         const el = e.currentTarget;
         if (el.hasAttribute("disabled")) {
@@ -1998,6 +2000,8 @@
     handleFailure(wrongChoice) {
       wrongChoice.setAttribute("disabled", "");
       wrongChoice.textContent = "X";
+      this.mistakes += 1;
+      this.mistakesTarget.textContent = `${this.mistakes}`;
     }
     handleSuccess(newNumber) {
       this.currentNumber = newNumber;
@@ -2053,7 +2057,8 @@
     "currentNumber",
     "currentNumberWord",
     "message",
-    "numberOption"
+    "numberOption",
+    "mistakes"
   ];
 
   // src/app.ts
