@@ -1,9 +1,9 @@
 {
-  "name": "tskeleton",
+  "name": "toybox",
   "version": "1.0.0",
   "description": "a ts skeleton",
   "main": "dist/index.js",
-  "repository": "git@github.com:bnbry/tskeleton.git",
+  "repository": "git@github.com:bnbry/toybox.git",
   "author": "Matthew Banbury <mbanbury@gmail.com>",
   "license": "CC0-1.0",
   "private": false,

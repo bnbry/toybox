@@ -1,2 +1,2 @@
-# tskeleton
-a frontend typescript project boilerplate skeleton
+# toybox
+collection of activities for early learning
