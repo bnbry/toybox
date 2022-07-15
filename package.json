@@ -14,8 +14,7 @@
     "clean": "rm -rf dist build",
     "build": "yarn clean && yarn build:dist",
     "build:dist": "node build.js",
-    "build:tsc": "tsc -p tsconfig.json",
-    "build:watch": "node build.js --watch=true"
+    "build:dev": "yarn clean && yarn build:dist --watch=true"
   },
   "devDependencies": {
     "@types/jest": "^28.1.5",
