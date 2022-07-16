@@ -123,7 +123,7 @@ select {
   width: 100%;
   margin: 16px 0 0;
   line-height: 1em;
-  font-family: "Fredoka One", cursive;
+  font-weight: bold;
 }
 .toybox .counting .current-number-word {
   margin: 0 0 0.16em;
@@ -135,10 +135,12 @@ select {
 .toybox .counting .mistakes {
   font-size: 14px;
   margin: 15px auto;
+  font-weight: normal;
 }
 .toybox .counting .message {
   font-size: 28px;
   margin: 15px auto;
+  font-weight: normal;
 }
 .toybox .counting .options {
   list-style-type: none;
@@ -164,7 +166,7 @@ select {
   border: 2px solid #ab6c09;
   text-decoration: none;
   line-height: 1em;
-  font-family: "Fredoka One", cursive;
+  font-weight: bold;
   top: 0;
 }
 .toybox .counting .option:first-child a {
@@ -225,13 +227,13 @@ select {
   }
 }
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Fredoka", cursive;
   color: #34495e;
   -webkit-font-smoothing: antialiased;
 }
 .masthead {
   text-align: center;
-  font-family: "Fredoka One", cursive;
+  font-weight: bold;
   color: #34495e;
   background-color: #efefef;
   padding: 5px;

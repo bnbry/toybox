@@ -12,7 +12,7 @@
     width: 100%;
     margin: 16px 0 0;
     line-height: 1em;
-    font-family: 'Fredoka One', cursive;
+    font-weight: bold;
   }
 
   .current-number-word {
@@ -26,11 +26,13 @@
   .mistakes {
     font-size: 14px;
     margin: 15px auto;
+    font-weight: normal;
   }
 
   .message {
     font-size: 28px;
     margin: 15px auto;
+    font-weight: normal;
   }
 
   .options {
@@ -59,7 +61,7 @@
     border: 2px solid $orange_darker;
     text-decoration: none;
     line-height: 1em;
-    font-family: 'Fredoka One', cursive;
+    font-weight: bold;
     top: 0;
   }
 

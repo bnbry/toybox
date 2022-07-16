@@ -1,18 +1,17 @@
 @import "css/reset.css";
-@import "css/colors";
-@import "css/typo";
+@import "css/theme";
 @import "css/utils";
 @import "css/counting";
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: $font;
   color: $void;
   -webkit-font-smoothing: antialiased;
 }
 
 .masthead {
   text-align: center;
-  font-family: $display-font;
+  font-weight: bold;
   color: $void;
   background-color: #efefef;
   padding: 5px;
